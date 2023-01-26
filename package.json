@@ -1,0 +1,18 @@
+{
+  "name": "orangehrmlive",
+  "version": "1.0.0",
+  "description": "Cypress Test Automation with POM ",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "cypress": "^12.2.0",
+    "cypress-file-upload": "^5.0.8"
+  },
+  "scripts": {
+    "test": "test",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
+  },
+  "author": "Magdalena Lozowska-Pereira",
+  "license": "ISC"
+}
