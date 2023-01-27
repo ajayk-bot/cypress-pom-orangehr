@@ -4,7 +4,9 @@ class loginPage {
     passwordInput: () => cy.get('input[name="password"]'),
     loginBtn: () => cy.get('button[type="submit"]'),
     errorMsg: () => cy.get('div[role="alert"]'),
-    // forgotPasswordBtn: () => cy.contains("Forgot your password?"),
+    emptyUsernameFieldMsg: () => cy.get(".oxd-input-group > .oxd-text"),
+    emptyPasswordFieldMsg: () => cy.get(".oxd-input-group > .oxd-text"),
+    forgotPasswordBtn: () => cy.contains("Forgot your password?"),
   };
 
   typeUsername(username) {
@@ -18,9 +20,10 @@ class loginPage {
   clickLogin() {
     this.elements.loginBtn().click();
   }
+
+  clickForgotPasswordBtn() {
+    this.elements.forgotPasswordBtn().click();
+  }
 }
 
 module.exports = new loginPage();
-
-// what means this here
-// why the same in brackests word
