@@ -5,28 +5,32 @@ describe("POM implementation for My Info page", () => {
     cy.visit(Cypress.config("baseUrl"));
   });
 
-  describe("Personal Details tab positive scenario", () => {
+  describe("Personal Details tab -- positive scenario", () => {
     it("should fill in the form with mandatory data & submit it", () => {
       cy.login("Admin", "admin123");
       cy.navigateToMyInfoTab();
       myInfoPage.enterFullName();
       myInfoPage.clickSaveBtn();
-      // Verify pop-up
+
+      // Verify CONFIRM POP-UP - saved successfully
+      cy.on("window:alert", (str) => {
+        expect(str).to.equal("Sucess");
+      });
     });
   });
 
-  describe("Personal Details tab negative scenario", () => {
+  describe("Personal Details tab -- negative scenario", () => {
     it("should display error message for submiting empty mandatory field", () => {
       cy.login("Admin", "admin123");
       cy.navigateToMyInfoTab();
-      // Clear default data from mandatory field
-      myInfoPage.navigateToFirstName();
+      // Clear default data from mandatory field > leave empty > save
+      myInfoPage.elements.fullNameField().clear().type(" ");
       myInfoPage.clickSaveBtn();
       // Verify error message
       myInfoPage.elements.requiredFieldErrorMsg().should("be.visible");
     });
 
-    it.only("should display error message for more than 30 characters in full name", () => {
+    it("should display error message for more than 30 characters in full name", () => {
       cy.login("Admin", "admin123");
       cy.navigateToMyInfoTab();
       // Type 31 characters into First Name field

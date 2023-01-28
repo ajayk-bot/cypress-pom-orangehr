@@ -7,12 +7,6 @@ class MyInfoPage {
     employeeIdField: () =>
       cy.xpath('//input[@class="oxd-input oxd-input--active"]'),
     driverLicenceField: () => cy.get('input[name="firstName"]'),
-    // licenceExpireDatePicker: () => cy.get('input[name="firstName"]'),
-    // nationalityDropdown: () => cy.get('input[name="firstName"]'),
-    // maritalStatusDropdown: () => cy.get('input[name="firstName"]'),
-    // genderChecker: () => cy.get('input[name="firstName"]'),
-    // bloodTypeField: () => cy.get('input[name="firstName"]'),
-    // attachmentField: () => cy.get('input[name="firstName"]'),
     saveBtn: () => cy.get('button[type="submit"]'),
   };
 

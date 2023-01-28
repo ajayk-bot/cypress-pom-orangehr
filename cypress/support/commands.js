@@ -27,9 +27,7 @@
 Cypress.Commands.add("login", (username, password) => {
   cy.clearCookies();
   cy.clearLocalStorage();
-  cy.visit(
-    "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
-  );
+  cy.visit(Cypress.config("baseUrl"));
 
   // Enter the username and password
   cy.get('input[name="username"]').type(username);
@@ -43,4 +41,6 @@ Cypress.Commands.add("getBySel", (selector, ...args) => {
   return cy.get(`[data-test=${selector}]`, ...args);
 });
 
-import "cypress-file-upload";
+Cypress.Commands.add("navigateToMyInfoTab", () => {
+  cy.contains("My Info").click();
+});

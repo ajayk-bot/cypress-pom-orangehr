@@ -5,7 +5,7 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
-    "cypress": "^12.2.0",
+    "cypress": "^12.3.0",
     "cypress-file-upload": "^5.0.8"
   },
   "scripts": {
@@ -14,5 +14,19 @@
     "cypress:run": "cypress run"
   },
   "author": "Magdalena Lozowska-Pereira",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mlozowska/demo-orangehrmlive-cypress.git"
+  },
+  "keywords": [
+    "cypress",
+    "automation",
+    "pom",
+    "testing"
+  ],
+  "bugs": {
+    "url": "https://github.com/mlozowska/demo-orangehrmlive-cypress/issues"
+  },
+  "homepage": "https://github.com/mlozowska/demo-orangehrmlive-cypress#readme"
 }
