@@ -14,6 +14,6 @@ install Cypress12 locally as a dev dependency for your project ```npm install --
 7. To run all the tests headlessly ```npx cypress run```
 
 
-## Pre-requisite:
+## Pre-requisite
 - NodeJS
 - VS Code (or any other code editor)
