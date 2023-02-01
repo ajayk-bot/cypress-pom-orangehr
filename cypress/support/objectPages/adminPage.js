@@ -1,15 +1,16 @@
 class adminPage {
   elements = {
     adminSpan: () => cy.get('span[class="oxd-topbar-header-breadcrumb"]'),
-    addBtn: () => cy.contains("Add"),
-    resetBtn: () => cy.contains("Reset"),
-    searchBtn: () => cy.contains("Search"),
-    addFormUserRoleDropdown: () => cy.get('i[class="oxd-icon"]'),
+    oragnizationTabId: () =>
+      cy.xpath("//span[normalize-space()='Organization']"),
+    generalInformationTabId: () =>
+      cy.xpath("//a[normalize-space()='General Information']"),
   };
 
-  // clickAdminBtn() {
-  //   this.elements.adminBtn().click();
-  // }
+  navigateToGeneralInformationForm() {
+    this.elements.oragnizationTabId().click();
+    this.elements.generalInformationTabId().click();
+  }
 }
 
 module.exports = new adminPage();

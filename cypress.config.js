@@ -7,5 +7,6 @@ module.exports = defineConfig({
     },
     baseUrl:
       "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
+    watchForFileChanges: false,
   },
 });

@@ -9,7 +9,7 @@ describe("POM implementation for Dashboard page", () => {
   });
 
   describe("By using dropdown the user", () => {
-    it("should be able to log out", () => {
+    it("should log out", () => {
       cy.login("Admin", "admin123");
       dashboardPage.navigateToUserDropdown();
       cy.get('ul[class="oxd-dropdown-menu"]').children("li").eq(3).click();
@@ -18,7 +18,7 @@ describe("POM implementation for Dashboard page", () => {
       loginPage.elements.loginTitle().should("have.text", "Login");
     });
 
-    it("should be able to display ABOUT alert", () => {
+    it("should display About alert", () => {
       cy.login("Admin", "admin123");
       dashboardPage.navigateToUserDropdown();
       cy.get('ul[class="oxd-dropdown-menu"]').children("li").eq(0).click();
@@ -27,7 +27,7 @@ describe("POM implementation for Dashboard page", () => {
       loginPage.elements.dropdownAboutAlert().should("have.text", "About");
     });
 
-    it("should be able to change password", () => {
+    it("should change password", () => {
       cy.login("Admin", "admin123");
       dashboardPage.navigateToUserDropdown();
       cy.get('ul[class="oxd-dropdown-menu"]').children("li").eq(2).click();
@@ -46,13 +46,13 @@ describe("POM implementation for Dashboard page", () => {
   });
 
   describe("Navigate to other pages", () => {
-    it("should be able to navigate to Admin page", () => {
+    it("should navigate to Admin page", () => {
       cy.login("Admin", "admin123");
       dashboardPage.clickAdminBtn();
       adminPage.elements.adminSpan().should("contain", "Admin");
     });
 
-    it("should be able to navigate to My Info page", () => {
+    it("should navigate to My Info page", () => {
       cy.login("Admin", "admin123");
 
       dashboardPage.clickMyInfoBtn();
