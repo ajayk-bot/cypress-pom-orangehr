@@ -17,7 +17,7 @@ install Cypress12 locally as a dev dependency for your project ```npm install --
     b) Install peer dependencies:
   for Cypress v10 and above
   ```npm install --save-dev cypress axe-core```
-  * Accessibility audit is going to fail due to issues on the admin page (check attached screenshot and video)
+  * Accessibility audit is going to fail due to issues on the admin page (check attached screenshot)
 
 
 ## Pre-requisite
