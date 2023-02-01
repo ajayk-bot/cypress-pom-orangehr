@@ -12,6 +12,12 @@ install Cypress12 locally as a dev dependency for your project ```npm install --
 5. Choose the Testing Type (e2e Testing)
 6. Choose a Browser
 7. To run all the tests headlessly ```npx cypress run```
+8. Test accessibility with axe-core in Cypress:  
+    a) For Cypress v10 and above install latest cypress-axe ```npm install --save-dev cypress-axe```  
+    b) Install peer dependencies:
+  for Cypress v10 and above
+  ```npm install --save-dev cypress axe-core```
+  * Accessibility audit is going to fail due to issues on the admin page (check attached screenshot and video)
 
 
 ## Pre-requisite
