@@ -1,7 +1,7 @@
 {
   "name": "orangehrmlive",
   "version": "1.0.0",
-  "description": "Cypress Test Automation with POM ",
+  "description": "E2E Framework Testing Cypress ",
   "main": "index.js",
   "dependencies": {
     "@cypress-audit/lighthouse": "^1.3.1"
