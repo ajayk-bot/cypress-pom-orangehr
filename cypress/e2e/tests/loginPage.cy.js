@@ -31,7 +31,7 @@ describe("POM implementation for Login page", () => {
       loginPage.elements.errorMsg().should("have.text", "Invalid credentials");
     });
 
-    it("should have displayed empty username field", () => {
+    it("should have displayed empty username field message", () => {
       loginPage.typeUsername(" ");
       loginPage.typePassword("admin123");
       loginPage.clickLogin();
@@ -41,7 +41,7 @@ describe("POM implementation for Login page", () => {
         .should("have.text", "Required");
     });
 
-    it("should have displayed empty password field", () => {
+    it("should have displayed empty password field message", () => {
       loginPage.typeUsername("Admin");
       loginPage.typePassword(" ");
       loginPage.clickLogin();

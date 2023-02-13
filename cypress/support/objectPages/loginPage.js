@@ -1,7 +1,7 @@
 class loginPage {
   elements = {
     loginTitle: () => cy.get(".oxd-text--h5"),
-    usernamenInput: () => cy.get('input[name="username"]'),
+    usernameInput: () => cy.get('input[name="username"]'),
     passwordInput: () => cy.get('input[name="password"]'),
     loginBtn: () => cy.get('button[type="submit"]'),
     errorMsg: () => cy.get('div[role="alert"]'),
@@ -12,7 +12,7 @@ class loginPage {
   };
 
   typeUsername(username) {
-    this.elements.usernamenInput().type(username);
+    this.elements.usernameInput().type(username);
   }
 
   typePassword(password) {
