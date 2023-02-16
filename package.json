@@ -28,7 +28,6 @@
     "cypress",
     "automation",
     "pom",
-    "cucumber",
     "testing"
   ],
   "bugs": {
