@@ -1,5 +1,5 @@
 # Cypress e2e test automation
-This is a sample project for [opensource-demo.orangehrmlive.com](https://opensource-demo.orangehrmlive.com/web/index.php/auth/login) with Page Object Model and JS. 
+This is a sample project for [opensource-demo.orangehrmlive.com](https://opensource-demo.orangehrmlive.com/web/index.php/auth/login) with Page Object Model, Cucumber and JS.
 
 
 ## How to Start
@@ -7,7 +7,7 @@ This is a sample project for [opensource-demo.orangehrmlive.com](https://opensou
 2.  Install all the dependencies ```npm i```
 3. Install Cypress ```npm install cypress```   
   OR  
-install Cypress12 locally as a dev dependency for your project ```npm install --save-dev cypress@12.3.0``` 
+install Cypress12 locally as a dev dependency for your project ```npm install --save-dev cypress@[latest version]``` 
 4. Open the Cypress ```npx cypress open```
 5. Choose the Testing Type (e2e Testing)
 6. Choose a Browser
