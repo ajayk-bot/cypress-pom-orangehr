@@ -27,7 +27,7 @@ class MyInfoPage {
   }
 
   clickSaveBtn() {
-    this.elements.saveBtn().eq(0).click();
+    this.elements.saveBtn().eq(0).click({ force: true });
   }
 }
 

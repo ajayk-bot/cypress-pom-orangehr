@@ -12,9 +12,9 @@ describe("POM implementation for My Info page", () => {
       myInfoPage.enterFullName();
       myInfoPage.clickSaveBtn();
 
-      // Verify CONFIRM POP-UP - saved successfully
+      // Verify Confirm pop-up message
       cy.on("window:alert", (str) => {
-        expect(str).to.equal("Sucess");
+        expect(str).to.equal("Success");
       });
     });
   });
