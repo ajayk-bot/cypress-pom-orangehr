@@ -2,7 +2,8 @@
 
 # Cypress e2e test automation
 
-This is a sample project for [opensource-demo.orangehrmlive.com](https://opensource-demo.orangehrmlive.com/web/index.php/auth/login) with Page Object Model, Cucumber and JS.
+This is a sample project for [opensource-demo.orangehrmlive.com](https://opensource-demo.orangehrmlive.com/web/index.php/auth/login) with Page Object Model, Cucumber example and JS. There is also added Mochawesome reporter for Cypress POM tests and accessibility test (commented-out not to cause tests and test pipeline failure)
+
 
 ## How to Start
 
@@ -10,10 +11,10 @@ This is a sample project for [opensource-demo.orangehrmlive.com](https://opensou
 - Install all the dependencies `npm i`
 
 ## Cypress Mochawesome Reporter
-
 https://www.npmjs.com/package/cypress-mochawesome-reporter
 
-![report-html](https://drive.google.com/file/d/1_rBGsUcynPPsjssi1EDJjTqTjlGfCEsh/view?usp=sharing "Report-html")
+## Test accessibility with axe-core 
+https://www.npmjs.com/package/cypress-axe
 
 ## Pre-requisite
 
