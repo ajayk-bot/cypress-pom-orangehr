@@ -2,7 +2,7 @@
   "name": "orangehrmlive",
   "version": "1.0.0",
   "description": "E2E Framework Testing Cypress ",
-  "main": "index.js",
+  "main": "cypress.config.js",
   "dependencies": {
     "@cypress-audit/lighthouse": "^1.3.1"
   },
@@ -11,13 +11,14 @@
     "cypress": "^12.5.0",
     "cypress-axe": "^0.14.0",
     "cypress-cucumber-preprocessor": "^4.3.1",
-    "cypress-file-upload": "^5.0.8",
+    "cypress-mochawesome-reporter": "^3.3.0",
     "cypress-xpath": "^2.0.1"
   },
   "scripts": {
-    "test": "test",
-    "cypress:open": "cypress open",
-    "cypress:run": "cypress run"
+    "cypress:open": "cypress open --e2e --browser chrome",
+    "cypress:run": "cypress run",
+    "cypress:execution": "cypress run --spec cypress/e2e/features/*",
+    "html-report": "cypress run --spec cypress/e2e/tests/* --browser chrome"
   },
   "author": "Magdalena Lozowska-Pereira",
   "license": "ISC",
@@ -29,7 +30,9 @@
     "cypress",
     "automation",
     "pom",
-    "testing"
+    "testing",
+    "mochawesome-reports",
+    "cucumber"
   ],
   "bugs": {
     "url": "https://github.com/mlozowska/demo-orangehrmlive-cypress/issues"

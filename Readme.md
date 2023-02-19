@@ -1,4 +1,4 @@
-![download](https://user-images.githubusercontent.com/60215258/219694698-59427863-ef3a-4fb2-a4d7-e9d48e3823f2.png)
+![logo](https://user-images.githubusercontent.com/60215258/219694698-59427863-ef3a-4fb2-a4d7-e9d48e3823f2.png)
 
 # Cypress e2e test automation
 
@@ -8,10 +8,13 @@ This is a sample project for [opensource-demo.orangehrmlive.com](https://opensou
 
 - Clone the project
 - Install all the dependencies `npm i`
-- Install latest Cypress version locally as a dev dependency for your project `npm install --save-dev cypress@[latest version]`
-- Install Cucumber plugin by running `npm install --save-dev cypress-cucumber-preprocessor`
+
+## Cypress Mochawesome Reporter
+
+https://www.npmjs.com/package/cypress-mochawesome-reporter
+
+![report-html](https://drive.google.com/file/d/1_rBGsUcynPPsjssi1EDJjTqTjlGfCEsh/view?usp=sharing "Report-html")
 
 ## Pre-requisite
 
 - NodeJS
-- VS Code (or any other code editor)
