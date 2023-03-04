@@ -4,10 +4,10 @@
 
 This is a sample project for [opensource-demo.orangehrmlive.com](https://opensource-demo.orangehrmlive.com/web/index.php/auth/login) with:
 - Page Object Model
+- Data-Driven tests
 - Cucumber example 
 - Mochawesome reporter for Cypress POM tests
 - Accessibility tests (which are currently commented out to avoid causing failures in the test pipeline)
-
 
 ## How to Start
 
