@@ -19,12 +19,19 @@ module.exports = defineConfig({
     },
     baseUrl:
       "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
-    watchForFileChanges: false,
     chromeWebSecurity: false,
+    experimentalSessionAndOrigin: true,
     defaultCommandTimeout: 10000,
     pageLoadTimeout: 120000,
     screenshotOnRunFailure: true,
-    trashAssetsBeforeRuns: false,
+    trashAssetsBeforeRuns: true,
     video: false,
+    videoUploadOnPasses: false,
+    viewportHeight: 1080,
+    viewportWidth: 1920,
+    reporter: "cypress-multi-reporters",
+    reporterOptions: {
+      configFile: "reporter-config.json",
+    },
   },
 });
