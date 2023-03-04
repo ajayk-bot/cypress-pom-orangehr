@@ -1,13 +1,24 @@
 import loginPage from "../../support/objectPages/loginPage";
 import dashboardPage from "../../support/objectPages/dashboardPage";
 
-const tests = require("../../fixtures/data-driven/loginUsers.json");
+const tests = require("../../fixtures/loginUsers.json");
 
 describe("Login Page correct & incorrect login credentials", () => {
   beforeEach(() => {
     cy.visit(Cypress.config("baseUrl"));
   });
 
+  // data driven only valid credentials from json
+  it("should login to Dashboard Page", () => {
+    cy.fixture("loginUser").then((data) => {
+      loginPage.typeUsername(data.username);
+      loginPage.typePassword(data.password);
+      loginPage.clickLogin();
+      dashboardPage.validateBreadcrumbText();
+    });
+  });
+
+  // data driven valid & invalid credentials
   tests.forEach((test) => {
     it(test.name, () => {
       loginPage.typeUsername(test.username);
@@ -15,9 +26,9 @@ describe("Login Page correct & incorrect login credentials", () => {
       loginPage.clickLogin();
 
       if (test.name === "should login to Dashboard page") {
-        dashboardPage.elements.dashboardSpan().should("have.text", "Dashboard");
+        dashboardPage.validateBreadcrumbText();
       } else {
-        loginPage.elements.errorMsg().should("have.text", test.expected);
+        loginPage.getErrorMsg();
       }
     });
   });
