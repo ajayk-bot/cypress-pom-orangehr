@@ -12,7 +12,6 @@
     "cypress-axe": "^0.14.0",
     "cypress-cucumber-preprocessor": "^4.3.1",
     "cypress-mochawesome-reporter": "^3.3.0",
-    "cypress-multi-reporters": "^1.6.2",
     "cypress-xpath": "^2.0.1"
   },
   "scripts": {
