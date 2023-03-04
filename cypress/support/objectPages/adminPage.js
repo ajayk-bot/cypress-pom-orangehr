@@ -1,3 +1,4 @@
+const data = require("../../fixtures/generalInformation.json");
 class adminPage {
   elements = {
     adminSpan: () => cy.get('span[class="oxd-topbar-header-breadcrumb"]'),
@@ -8,9 +9,7 @@ class adminPage {
     formId: () => cy.xpath("//*[@id='app']/div[1]/div[2]/div[2]/div/div"),
     editBtn: () => cy.get(".oxd-switch-input"),
     registartionNumberId: () =>
-      cy.xpath(
-        '//*[@id="app"]/div[1]/div[2]/div[2]/div/div/form/div[2]/div/div[1]/div/div[2]/input'
-      ),
+      cy.xpath("(//input[@class='oxd-input oxd-input--active'])[3]"),
     taxId: () =>
       cy.xpath(
         '//*[@id="app"]/div[1]/div[2]/div[2]/div/div/form/div[2]/div/div[2]/div/div[2]/input'
@@ -52,31 +51,40 @@ class adminPage {
   }
 
   enterRegistrationNumber() {
-    this.elements.registartionNumberId().type();
+    this.elements
+      .registartionNumberId()
+      .clear({ force: true })
+      .type(data.registrationNumber);
+  }
+
+  enterTaxId() {
+    this.elements.taxId().type(data.tax);
   }
 
   enterPhone() {
-    this.elements.phoneId().type();
+    this.elements.phoneId().clear({ force: true }).type(data.phone);
   }
 
   enterEmail() {
-    this.elements.emailId().clear({ force: true });
+    this.elements.emailId().clear({ force: true }).type(data.email);
+  }
+
+  enterAddress() {
+    this.elements.streetId().clear({ force: true }).type(data.street);
   }
 
   enterCity() {
-    this.elements.streetId().clear().type();
-  }
-
-  enterCity() {
-    this.elements.cityId().clear().type();
+    this.elements.cityId().clear({ force: true }).type(data.city);
   }
 
   enterPostalCode() {
-    this.elements.postalCodeId().type();
+    this.elements.postalCodeId().type(data.postalCode);
   }
 
-  selectCountry() {
-    this.elements.countryId().select("3");
+  getSuccessAlert() {
+    cy.on("window:alert", (txt) => {
+      expect(txt).to.contains("Successfully updated");
+    });
   }
 }
 module.exports = new adminPage();
