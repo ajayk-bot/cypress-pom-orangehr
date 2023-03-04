@@ -1,3 +1,5 @@
+const data = require("../../fixtures/loginUser.json");
+
 class loginPage {
   elements = {
     loginTitle: () => cy.get(".oxd-text--h5"),
@@ -25,6 +27,10 @@ class loginPage {
 
   clickForgotPasswordBtn() {
     this.elements.forgotPasswordBtn().click();
+  }
+
+  getErrorMsg() {
+    this.elements.errorMsg(data.expected);
   }
 }
 
