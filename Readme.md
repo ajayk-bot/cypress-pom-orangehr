@@ -17,6 +17,9 @@ This is a sample project for [opensource-demo.orangehrmlive.com](https://opensou
 ## Cypress Mochawesome Reporter
 https://www.npmjs.com/package/cypress-mochawesome-reporter
 
+## JUnit Reporter
+https://www.npmjs.com/package/mocha-junit-reporter
+
 ## Test accessibility with axe-core 
 https://www.npmjs.com/package/cypress-axe
 
