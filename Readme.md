@@ -6,7 +6,8 @@ This is a sample project for [opensource-demo.orangehrmlive.com](https://opensou
 - Page Object Model
 - Data-Driven tests
 - Cucumber example 
-- Mochawesome reporter for Cypress POM tests
+- Mochawesome reporter 
+- JUnit reporter 
 - Accessibility tests (which are currently commented out to avoid causing failures in the test pipeline)
 
 ## How to Start
