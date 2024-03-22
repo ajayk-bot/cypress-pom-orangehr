@@ -1,0 +1,230 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 5,
+    "passes": 4,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-03-22T08:02:40.275Z",
+    "end": "2024-03-22T08:03:50.461Z",
+    "duration": 70186,
+    "testsRegistered": 5,
+    "passPercent": 80,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "aec32746-7073-4035-ac2b-07c54291e657",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\dashboardPage.cy.js",
+      "file": "cypress\\e2e\\tests\\dashboardPage.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e75c6d59-af92-4d51-8fac-cf9cd4d12662",
+          "title": "POM implementation for Dashboard page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "9e971723-8c71-4629-bd0b-8c8b6b6b847b",
+              "title": "By using dropdown the user",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should log out",
+                  "fullTitle": "POM implementation for Dashboard page By using dropdown the user should log out",
+                  "timedOut": null,
+                  "duration": 15468,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      {\n        \"title\": \"Failed screenshot\",\n        \"value\": \"\\\\dashboardPage.cy.js\\\\POM implementation for Dashboard page -- By using dropdown the user -- should log out (failed).png\"\n      }\n    ],\n    [\n      {\n        \"title\": \"Failed screenshot\",\n        \"value\": \"\\\\dashboardPage.cy.js\\\\POM implementation for Dashboard page -- By using dropdown the user -- should log out (failed) (attempt 2).png\"\n      }\n    ]\n  ]\n}",
+                  "code": "cy.login(\"Admin\", \"admin123\");\n_dashboardPage[\"default\"].navigateToUserDropdown();\ncy.get('ul[class=\"oxd-dropdown-menu\"]').children(\"lifdf\").eq(3).click();\n// Verify user is logged out\n_loginPage[\"default\"].elements.loginTitle().should(\"have.text\", \"Login\");",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `lifdf`, but never found it. Queried from:\n\n              > cy.get(ul[class=\"oxd-dropdown-menu\"])",
+                    "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `lifdf`, but never found it. Queried from:\n\n              > cy.get(ul[class=\"oxd-dropdown-menu\"])\n    at Context.eval (cypress/e2e/tests/dashboardPage.cy.js:15:46)",
+                    "diff": null
+                  },
+                  "uuid": "33c7c258-9c1d-4e86-8dbb-c795cb6d037e",
+                  "parentUUID": "9e971723-8c71-4629-bd0b-8c8b6b6b847b",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "should display About alert",
+                  "fullTitle": "POM implementation for Dashboard page By using dropdown the user should display About alert",
+                  "timedOut": null,
+                  "duration": 5190,
+                  "state": "passed",
+                  "speed": "medium",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.login(\"Admin\", \"admin123\");\n_dashboardPage[\"default\"].navigateToUserDropdown();\ncy.get('ul[class=\"oxd-dropdown-menu\"]').children(\"li\").eq(0).click();\n// Verify alert is displayed\n_loginPage[\"default\"].elements.dropdownAboutAlert().should(\"have.text\", \"About\");",
+                  "err": {},
+                  "uuid": "a765885d-8ae2-4e9c-ac05-baaa91b95dc8",
+                  "parentUUID": "9e971723-8c71-4629-bd0b-8c8b6b6b847b",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "should change password",
+                  "fullTitle": "POM implementation for Dashboard page By using dropdown the user should change password",
+                  "timedOut": null,
+                  "duration": 7937,
+                  "state": "passed",
+                  "speed": "medium",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.login(\"Admin\", \"admin123\");\n_dashboardPage[\"default\"].navigateToUserDropdown();\ncy.get('ul[class=\"oxd-dropdown-menu\"]').children(\"li\").eq(2).click();\n// Type current & new passwords\n_updatePasswordPage[\"default\"].elements.currentPwdField().type(\"admin123\");\n_updatePasswordPage[\"default\"].elements.newPwdField().type(\"NewPassword123!\");\n_updatePasswordPage[\"default\"].elements.confirmPwdField().type(\"NewPassword123!\");\n_updatePasswordPage[\"default\"].elements.submitBtn().click();\n// Verify confirm pop-up - saved successfully\ncy.on(\"window:alert\", function (str) {\n  expect(str).to.equal(\"Sucess\");\n});",
+                  "err": {},
+                  "uuid": "3e8091da-2915-4da9-8422-4b855b3fdfb4",
+                  "parentUUID": "9e971723-8c71-4629-bd0b-8c8b6b6b847b",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "a765885d-8ae2-4e9c-ac05-baaa91b95dc8",
+                "3e8091da-2915-4da9-8422-4b855b3fdfb4"
+              ],
+              "failures": [
+                "33c7c258-9c1d-4e86-8dbb-c795cb6d037e"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 28595,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "57893c7f-fc94-4701-a063-83d78c3ae6aa",
+              "title": "Navigate to other pages",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "should navigate to Admin page",
+                  "fullTitle": "POM implementation for Dashboard page Navigate to other pages should navigate to Admin page",
+                  "timedOut": null,
+                  "duration": 7400,
+                  "state": "passed",
+                  "speed": "medium",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.login(\"Admin\", \"admin123\");\n_dashboardPage[\"default\"].clickAdminBtn();\n_adminPage[\"default\"].elements.adminSpan().should(\"contain\", \"Admin\");",
+                  "err": {},
+                  "uuid": "0d41b815-b4bc-4150-8fbd-96f595fb9b2a",
+                  "parentUUID": "57893c7f-fc94-4701-a063-83d78c3ae6aa",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "should navigate to My Info page",
+                  "fullTitle": "POM implementation for Dashboard page Navigate to other pages should navigate to My Info page",
+                  "timedOut": null,
+                  "duration": 6429,
+                  "state": "passed",
+                  "speed": "medium",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.login(\"Admin\", \"admin123\");\n_dashboardPage[\"default\"].clickMyInfoBtn();\n_dashboardPage[\"default\"].elements.dashboardSpan().should(\"have.text\", \"PIM\");",
+                  "err": {},
+                  "uuid": "cb733785-29d2-4543-82f9-c6b11cc096c7",
+                  "parentUUID": "57893c7f-fc94-4701-a063-83d78c3ae6aa",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "0d41b815-b4bc-4150-8fbd-96f595fb9b2a",
+                "cb733785-29d2-4543-82f9-c6b11cc096c7"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 13829,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "custom-title",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
