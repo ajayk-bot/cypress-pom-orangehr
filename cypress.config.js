@@ -13,6 +13,10 @@ module.exports = defineConfig({
   },
   e2e: {
     specPattern: "cypress/e2e/**/*.{js,feature}",
+    retries: {
+      runMode: 1,
+      openMode: 1
+    },
     setupNodeEvents(on, config) {
       on("file:preprocessor", cucumber());
       require("cypress-mochawesome-reporter/plugin")(on);

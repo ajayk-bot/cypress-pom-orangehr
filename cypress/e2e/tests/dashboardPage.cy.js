@@ -12,7 +12,7 @@ describe("POM implementation for Dashboard page", () => {
     it("should log out", () => {
       cy.login("Admin", "admin123");
       dashboardPage.navigateToUserDropdown();
-      cy.get('ul[class="oxd-dropdown-menu"]').children("li").eq(3).click();
+      cy.get('ul[class="oxd-dropdown-menu"]').children("lifdf").eq(3).click();
 
       // Verify user is logged out
       loginPage.elements.loginTitle().should("have.text", "Login");
