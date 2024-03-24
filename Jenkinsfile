@@ -1,5 +1,10 @@
 pipeline {
     agent any
+
+     tools {
+        // Specify the JDK installation by name
+        jdk 'jdk17'
+    }
         parameters {
             string(name: 'SPEC', defaultValue: 'cypress/e2e/tests/*.cy.js', description: 'Ej: cypress/e2e/features/*.feature')
             choice(name: 'BROWSER', choices: ['chrome', 'edge', 'firefox'], description: 'Pick the web browser you want to use to run your scripts')
