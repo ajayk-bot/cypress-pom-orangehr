@@ -20,7 +20,8 @@ pipeline {
         stage('Testing') {
             steps {
                 bat "npm i"
-                bat "npx cypress run --browser ${BROWSER} --spec ${SPEC}"
+                bat "npx cypress run --browser ${BROWSER} --spec ${SPEC} --reporter mochawesome"
+                cypress run --reporter mochawesome
             }
         }
         
@@ -43,7 +44,7 @@ pipeline {
             // slackSend channel: '#jenkins-example',
             //     color: COLOR_MAP[currentBuild.currentResult],
             //     message: "*${currentBuild.currentResult}:* Job ${env.JOB_NAME} build ${env.BUILD_NUMBER} by ${BUILD_USER}\n Tests:${SPEC} executed at ${BROWSER} \n More info at: ${env.BUILD_URL}HTML_20Report/"
-            
+            bat 'xcopy /s C:\\Users\\ajay\\.jenkins\\workspace\\CypressE2F_Pipeline\\cypress\\report $WORKSPACE\\reports'
             publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'cypress/report', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
             //deleteDir()
         }
