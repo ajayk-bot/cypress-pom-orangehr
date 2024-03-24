@@ -1,7 +1,7 @@
 pipeline {
     agent any
         parameters {
-            string(name: 'SPEC', defaultValue: 'cypress/integration/**/**', description: 'Ej: cypress/integration/pom/*.spec.js')
+            string(name: 'SPEC', defaultValue: 'cypress/e2e/tests/*.cy.js', description: 'Ej: cypress/e2e/features/*.feature')
             choice(name: 'BROWSER', choices: ['chrome', 'edge', 'firefox'], description: 'Pick the web browser you want to use to run your scripts')
     }
     // options {
