@@ -21,7 +21,7 @@ pipeline {
             steps {
                 bat "npm i"
                 bat "npx cypress run --browser ${BROWSER} --spec ${SPEC} --reporter mochawesome"
-                cypress run --reporter mochawesome
+              
             }
         }
         
